@@ -104,16 +104,17 @@ export default function App() {
         <Button title = 'Calculate'
           disabled = {!height || !weight}
           onPress={() => {
+              let bmiValue = 0.00
               if (tab == 0 ){
-                  let bmiValue = weight / (height * height)
+                bmiValue = weight / (height * height)
               }else{
-                  let bmiValue = weight * 0.454 / (height * 2.54 * height * 2.54)
+                bmiValue = weight * 0.454 / (height * 2.54 * height * 2.54)
 
               }
             if (bmiValue < 18.5){
               setBmi('Underweight');
             }else if (bmiValue >= 18.5 && bmiValue <= 24.9){
-              setBmi('Normal weight');
+              setBmi('Normalweight');
             } else if (bmiValue >= 25 && bmiValue <= 29.9){
               setBmi('Overweight');
             } else if (bmiValue >= 30){
