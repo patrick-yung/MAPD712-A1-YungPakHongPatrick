@@ -33,7 +33,7 @@ export default function App() {
               <TextInput
                 style={styles.input}
                 onChangeText={(value) => {
-                  if (value === '' || /^[0-9]*.[0-9]*/.test(value)) setHeight(value);   
+                  if (value === '' || /^[0-9]*\.?[0-9]*$/.test(value)) setHeight(value);   
                   }
                 }
                 value={height}
@@ -43,7 +43,7 @@ export default function App() {
               <TextInput
                 style={styles.input}
                 onChangeText={(value) => {
-                  if (value === '' || /^[0-9]*.[0-9]*/.test(value)) setWeight(value);   
+                  if (value === '' || /^[0-9]*\.?[0-9]*$/.test(value)) setWeight(value);   
                   }
                 }
                 value={weight}
@@ -56,7 +56,7 @@ export default function App() {
               <TextInput
                 style={styles.input}
                 onChangeText={(value) => {
-                  if (value === '' || /^[0-9]*$/.test(value)) setHeight(value);   
+                  if (value === '' || /^[0-9]*\.?[0-9]*$/.test(value)) setHeight(value);   
                   }
                 }
                 value={height}
@@ -66,7 +66,7 @@ export default function App() {
               <TextInput
                 style={styles.input}
                 onChangeText={(value) => {
-                  if (value === '' || /^[0-9]*$/.test(value)) setWeight(value);   
+                  if (value === '' || /^[0-9]*\.?[0-9]*$/.test(value)) setWeight(value);   
                   }
                 }
                 value={weight}
